@@ -3,25 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mark Precious Agyoseh (Benwu) | Networking & IT Administration</title>
+<title>Mark Precious Agyoseh (Benwu) | Networking and IT Administration</title>
 <meta name="description" content="Computer Science graduate focused on networking, cybersecurity and IT administration. Based in Abuja, Nigeria.">
+<meta name="theme-color" content="#0b6e99">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mark Precious Agyoseh (Benwu) | Networking and IT Administration">
+<meta property="og:description" content="Cisco Packet Tracer networks, Windows Server Active Directory and security labs. Based in Abuja, Nigeria.">
+<meta property="og:image" content="Multi-Branch_Office_Network_with_VLANs__Inter-VLAN_Routing__and_DHCP.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b6e99'/%3E%3Cpath d='M12 32h40M20 32V18M44 32V18M20 32v14M44 32v14' stroke='%23fff' stroke-width='4' fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Mark Precious Agyoseh","alternateName":"Benwu","email":"mailto:preciousagyosehmark@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Abuja","addressCountry":"NG"},"alumniOf":"Federal University Wukari","jobTitle":"Computer Science graduate","sameAs":["https://github.com/BenwuMPA"]}
+</script>
 <style>
-:root{--bg:#eef2f4;--surface:#fff;--ink:#14202b;--muted:#4d5d6b;--line:#c9d4db;--accent:#0b6e99;--accent-ink:#fff;--signal:#d98a00}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1820;--surface:#16222d;--ink:#e8eef2;--muted:#9fb0bd;--line:#2a3a47;--accent:#4cb4e0;--accent-ink:#0f1820;--signal:#f0b44a}}
+:root{--bg:#eef2f4;--surface:#fff;--ink:#14202b;--muted:#4d5d6b;--line:#c9d4db;--accent:#0b6e99;--accent-ink:#fff;--signal:#b87300;--ok:#1c7a46}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1820;--surface:#16222d;--ink:#e8eef2;--muted:#9fb0bd;--line:#2a3a47;--accent:#4cb4e0;--accent-ink:#0f1820;--signal:#f0b44a;--ok:#5fcf8f}}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:4rem}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "IBM Plex Sans",system-ui,sans-serif}
 h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;line-height:1.15;margin:0}
 a{color:var(--accent)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:var(--accent-ink);padding:.6rem 1rem;z-index:10}
+.skip:focus{left:0}
 .wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
-nav{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;padding:1.1rem 0;font-size:.95rem}
-nav a{color:var(--muted);text-decoration:none}
-nav a:hover{color:var(--accent)}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;padding:.9rem 0;font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none;padding:.1rem 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--accent);border-color:var(--accent)}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:3rem 0 4rem}
+.status{display:inline-flex;align-items:center;gap:.5rem;font-size:.95rem;color:var(--muted);margin-bottom:1rem}
+.status::before{content:"";width:.6rem;height:.6rem;border-radius:50%;background:var(--ok)}
 .hero h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:700;letter-spacing:-.02em}
 .hero p.lead{font-size:1.2rem;color:var(--muted);max-width:34rem;margin:1.2rem 0 1.8rem}
 .btns{display:flex;flex-wrap:wrap;gap:.75rem}
@@ -38,65 +52,75 @@ nav a:hover{color:var(--accent)}
 section{padding:3rem 0;border-top:1px solid var(--line)}
 section>.wrap>h2{font-size:1.8rem;margin-bottom:1.5rem}
 .about{max-width:42rem}
+.about p{margin:0 0 1rem}
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.25rem}
 .skills h3,.proj h3,.job h3{font-size:1.15rem;margin-bottom:.4rem}
 .skills ul{margin:0;padding-left:1.1rem;color:var(--muted)}
 .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.25rem}
 .proj{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:.4rem;padding:1.25rem}
+.proj.wide{grid-column:1/-1}
 .proj p{margin:.3rem 0 .8rem;color:var(--muted)}
 .proj .tags{font-size:.9rem;color:var(--ink);margin-bottom:.8rem}
 .proj a{font-weight:500}
 .proj img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:.4rem;margin:.6rem 0}
+.sub{font-size:1.2rem;margin:2rem 0 .5rem}
 .job{display:grid;grid-template-columns:11rem 1fr;gap:.5rem 1.5rem;padding:1rem 0;border-bottom:1px solid var(--line)}
-.job:last-child{border-bottom:0}
+.job:last-of-type{border-bottom:0}
 .job .when{color:var(--muted);font-size:.95rem}
 .job p{margin:.2rem 0 0;color:var(--muted)}
-.contact a{display:block;font-size:1.15rem;margin:.3rem 0}
+.contact a{display:block;font-size:1.15rem;margin:.3rem 0;width:fit-content}
 footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
 @media (max-width:42rem){.hero{grid-template-columns:1fr;padding-top:1.5rem}.job{grid-template-columns:1fr}}
+@media print{.bar,.btns,.topo{display:none}body{background:#fff;color:#000}section{padding:1rem 0}}
 </style>
 </head>
 <body>
-<div class="wrap">
+<a class="skip" href="#main">Skip to content</a>
+<div class="bar"><div class="wrap">
 <nav aria-label="Main">
 <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
 </nav>
+</div></div>
 
+<div class="wrap">
 <header class="hero">
 <div>
+<p class="status">Open to IT support and network roles</p>
 <h1>Mark Precious Agyoseh</h1>
-<p class="lead">Computer Science graduate focused on networking, cybersecurity and IT administration. I build and document lab networks, and I'm based in Abuja, Nigeria.</p>
+<p class="lead">Computer Science graduate focused on networking, cybersecurity and IT administration. I build and document lab networks. Based in Abuja, Nigeria.</p>
 <div class="btns">
 <a class="btn primary" href="#projects">See my projects</a>
 <a class="btn ghost" href="#contact">Get in touch</a>
 </div>
 </div>
-<svg class="topo" viewBox="0 0 400 300" role="img" aria-label="Diagram of a headquarters router linked to a branch router, each with a switch and PCs">
-<path class="link" d="M95 150H305"/>
-<path class="live" d="M95 150H305"/>
-<path class="link" d="M60 190V245M60 190H20V245M60 190H100V245"/>
-<path class="link" d="M340 190V245M340 190H300V245M340 190H380V245"/>
-<path class="link" d="M60 150V110M340 150V110"/>
-<circle class="node" cx="60" cy="150" r="22"/>
-<circle class="node" cx="340" cy="150" r="22"/>
-<rect class="node" x="38" y="85" width="44" height="26" rx="4"/>
-<rect class="node" x="318" y="85" width="44" height="26" rx="4"/>
-<rect class="node" x="2" y="245" width="36" height="26" rx="4"/>
-<rect class="node" x="82" y="245" width="36" height="26" rx="4"/>
-<rect class="node" x="282" y="245" width="36" height="26" rx="4"/>
-<rect class="node" x="362" y="245" width="36" height="26" rx="4"/>
-<text x="60" y="76" text-anchor="middle">HQ</text>
-<text x="340" y="76" text-anchor="middle">Branch</text>
-<text x="200" y="138" text-anchor="middle">WAN link</text>
+<svg class="topo" viewBox="0 0 400 300" role="img" aria-label="Diagram of a headquarters router linked by a WAN to a branch router, each with a switch and three PCs">
+<path class="link" d="M82 120H318"/>
+<path class="live" d="M82 120H318"/>
+<path class="link" d="M60 142V175M60 175H30V215M60 175V215M60 175H90V215"/>
+<path class="link" d="M340 142V175M340 175H310V215M340 175V215M340 175H370V215"/>
+<circle class="node" cx="60" cy="120" r="22"/>
+<circle class="node" cx="340" cy="120" r="22"/>
+<rect class="node" x="38" y="160" width="44" height="16" rx="4"/>
+<rect class="node" x="318" y="160" width="44" height="16" rx="4"/>
+<rect class="node" x="14" y="215" width="32" height="24" rx="4"/>
+<rect class="node" x="44" y="215" width="32" height="24" rx="4"/>
+<rect class="node" x="74" y="215" width="32" height="24" rx="4"/>
+<rect class="node" x="294" y="215" width="32" height="24" rx="4"/>
+<rect class="node" x="324" y="215" width="32" height="24" rx="4"/>
+<rect class="node" x="354" y="215" width="32" height="24" rx="4"/>
+<text x="60" y="78" text-anchor="middle">HQ</text>
+<text x="340" y="78" text-anchor="middle">Branch</text>
+<text x="200" y="108" text-anchor="middle">WAN link</text>
+<text x="200" y="272" text-anchor="middle">Routers, switches and PCs</text>
 </svg>
 </header>
 </div>
 
-<main>
+<main id="main">
 <section id="about"><div class="wrap">
 <h2>About</h2>
 <div class="about">
-<p>I graduated in Computer Science from Federal University Wukari in 2025 and am currently serving my NYSC year. My interests are networking, cybersecurity and IT administration, and I learn by building: Cisco Packet Tracer networks, a Windows Server Active Directory home lab, and security lab exercises.</p>
+<p>I graduated in Computer Science from Federal University Wukari in 2025 and am currently serving my NYSC year. My interests are networking, cybersecurity and IT administration, and I learn by building: Cisco Packet Tracer networks, a Windows Server Active Directory home lab and security lab exercises.</p>
 <p>Before and during university I worked as a computer technician and then a computer instructor, so I'm comfortable both fixing systems and explaining how they work. I'm looking for roles in IT support, network administration and related fields.</p>
 </div>
 </div></section>
@@ -104,42 +128,55 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px sol
 <section id="skills"><div class="wrap">
 <h2>Skills</h2>
 <div class="skills">
-<div><h3>Networking</h3><ul><li>Cisco Packet Tracer</li><li>Multi-site network design (HQ and branch)</li><li>CCNA-level concepts</li></ul></div>
+<div><h3>Networking</h3><ul><li>Cisco Packet Tracer</li><li>VLANs, inter-VLAN routing and DHCP</li><li>Multi-site design (HQ and branch)</li><li>CCNA-level concepts</li></ul></div>
 <div><h3>IT administration</h3><ul><li>Windows Server and Active Directory</li><li>Help desk and troubleshooting</li><li>Hardware and software support</li></ul></div>
 <div><h3>Cybersecurity</h3><ul><li>Hands-on lab work</li><li>Security tooling practice</li></ul></div>
+<div><h3>Teaching</h3><ul><li>Computer instruction</li><li>Explaining technical topics plainly</li></ul></div>
 </div>
 </div></section>
 
 <section id="projects"><div class="wrap">
 <h2>Projects</h2>
 <div class="projects">
-<article class="proj">
-<h3>Multi-Branch Office Network with VLANs, Inter-VLAN Routing and DHCP</h3>
+<article class="proj wide">
+<h3>Multi-branch office network with VLANs, inter-VLAN routing and DHCP</h3>
 <a href="Multi-Branch_Office_Network_with_VLANs__Inter-VLAN_Routing__and_DHCP.png"><img src="Multi-Branch_Office_Network_with_VLANs__Inter-VLAN_Routing__and_DHCP.png" alt="Packet Tracer topology showing two sites linked by a WAN connection, with switches and PCs for Sales, IT, Management, Staff and Guest users" loading="lazy"></a>
-<p>A Cisco Packet Tracer network with two sites linked by a WAN connection, separate user groups on their own VLANs, inter-VLAN routing and DHCP.</p>
+<p>A Cisco Packet Tracer network with two sites linked by a WAN connection. Sales, IT, Management, Staff and Guest users sit on separate VLANs, with inter-VLAN routing and DHCP.</p>
 <div class="tags">Packet Tracer, VLANs, inter-VLAN routing, DHCP</div>
-<a href="Multi-Branch Office Network with VLANs, Inter-VLAN Routing, and DHCP.pkt" download>Download Packet Tracer file</a>
+<a href="Multi-Branch%20Office%20Network%20with%20VLANs%2C%20Inter-VLAN%20Routing%2C%20and%20DHCP.pkt" download>Download the Packet Tracer file</a>
+</article>
+<article class="proj">
+<h3>Active Directory home lab</h3>
+<p>A Windows Server Active Directory lab for practising the day-to-day work of a help desk and systems administrator.</p>
+<div class="tags">Windows Server, Active Directory</div>
+</article>
+<article class="proj">
+<h3>More on GitHub</h3>
+<p>This site's source and my other work are on GitHub.</p>
+<a href="https://github.com/BenwuMPA">github.com/BenwuMPA</a>
 </article>
 </div>
 </div></section>
 
 <section id="experience"><div class="wrap">
 <h2>Experience and education</h2>
-<div class="job"><div class="when">Jan 2025 to Jan 2026</div><div><h3>Computer Instructor, Computer Village, Wukari</h3></div></div>
-<div class="job"><div class="when">Oct 2023 to Apr 2024</div><div><h3>Intern, African Center for ICT Innovation and Training (ACIT)</h3><p>American University of Nigeria, Yola.</p></div></div>
-<div class="job"><div class="when">Sept 2019 to June 2024</div><div><h3>Computer Technician, Computer Village, Wukari</h3></div></div>
-<div class="job"><div class="when">2021 to 2025</div><div><h3>B.Sc. Computer Science, Federal University Wukari</h3></div></div>
+<h3 class="sub">Work</h3>
+<div class="job"><div class="when">Jan 2025 to Jan 2026</div><div><h3>Computer Instructor</h3><p>Computer Village, Wukari</p></div></div>
+<div class="job"><div class="when">Oct 2023 to Apr 2024</div><div><h3>Intern</h3><p>African Center for ICT Innovation and Training (ACIT), American University of Nigeria, Yola</p></div></div>
+<div class="job"><div class="when">Sept 2019 to June 2024</div><div><h3>Computer Technician</h3><p>Computer Village, Wukari</p></div></div>
+<h3 class="sub">Education and service</h3>
 <div class="job"><div class="when">Ongoing</div><div><h3>National Youth Service Corps (NYSC)</h3></div></div>
+<div class="job"><div class="when">2021 to 2025</div><div><h3>B.Sc. Computer Science</h3><p>Federal University Wukari</p></div></div>
 </div></section>
 
 <section id="contact"><div class="wrap contact">
 <h2>Contact</h2>
-<p>Open to IT support, network administration and related roles.</p>
+<p>Open to IT support, network administration and related roles. Email is the quickest way to reach me.</p>
 <a href="mailto:preciousagyosehmark@gmail.com">preciousagyosehmark@gmail.com</a>
 <a href="tel:+2347045271780">07045271780</a>
-<!-- Add your LinkedIn and GitHub links here -->
 <a href="https://github.com/BenwuMPA">GitHub</a>
-<a href="https://www.linkedin.com/in/YOUR-PROFILE">LinkedIn</a>
+<!-- Add your LinkedIn link here once your profile URL is ready:
+<a href="https://www.linkedin.com/in/your-profile">LinkedIn</a> -->
 </div></section>
 </main>
 
